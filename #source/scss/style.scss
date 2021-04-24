@@ -14,12 +14,20 @@
 .header {
     background: #1a1a1a;
 }
-// main
-main {
-    padding: 170px 0 0 0;
-    @media (max-width: 768px) {
-        padding: 150px 0 0 0;
+// works 
+.works {
+    &__title {
+        @extend %title;
+        padding: 170px 0 20px 0;
+        @media (max-width: 768px) {
+            padding: 150px 0 20px 0;
+        }
     }
+}
+// main 
+main {
+    background: linear-gradient(#fbfbfb, #fff);
+    padding-top: 100px;
 }
 .books, .poster, .cutaway, .notebooks, .calendar {
     margin-bottom: 100px;
