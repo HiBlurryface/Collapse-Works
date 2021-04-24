@@ -1,0 +1,84 @@
+@import "_styles";
+@import "_header";
+@import "_footer";
+
+.books .container, 
+.poster .container,
+.notebooks .container,
+.cutaway .container,
+.calendar .container  {
+    max-width: 1600px;
+    margin: 0px auto;
+}
+// header 
+.header {
+    background: #1a1a1a;
+}
+// main
+main {
+    padding: 170px 0 0 0;
+    @media (max-width: 768px) {
+        padding: 150px 0 0 0;
+    }
+}
+.books, .poster, .cutaway, .notebooks, .calendar {
+    margin-bottom: 100px;
+    &__title {
+        font-size: 30px;
+        position: relative;
+        margin-bottom: 40px;
+        &:after {
+            position: absolute;
+            content: '';
+            background: #000;
+            height: 2px;
+            width: calc(100% - 300px);
+            right: 0;
+            top: 50%;
+            transform: translate(0%, -50%);
+        }
+    }
+}
+// slider
+.slider {
+    &__slide {
+        &-img {
+            & img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    & .swiper {
+        &-wrapper {
+            padding-bottom: 45px;
+        }
+        &-button {
+            &-prev, &-next {
+                bottom: 0;
+                outline: none;
+                height: 20px;
+                width: 10px;
+                &::after {
+                    outline: none;
+                    font-size: 18px;
+                    font-weight: 600;
+                    color: #000;
+                }
+            }
+            &-next {
+                right: calc(50% - 40px);
+            }
+            &-prev {
+                left: calc(50% - 40px);
+            }
+        }
+        &-pagination {
+            z-index: -1;
+            color: #000;
+            font-weight: bold;
+            bottom: 2px;
+            font-size: 16px;
+        }
+    }
+}
