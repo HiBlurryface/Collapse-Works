@@ -26,7 +26,7 @@ new Swiper('.slider', {
         el: '.swiper-pagination',
         type: 'fraction',
     },
-    simulateTouch: false,
+    simulateTouch: true,
     breakpoints: {
         1441: {
             slidesPerView: 4,
